@@ -1,6 +1,6 @@
-#Guess
+# Guess
 
-###A Guessing Game
+### A Guessing Game
 
 This is a game for people who don't know numbers but wanna guess them.
 
@@ -8,7 +8,7 @@ It's fun.
 
 Trust me.
 
-##Premise
+## Premise
 
 A random number is generated from 0 to 10.
 You have 10 guesses to get it right.
@@ -20,7 +20,7 @@ But now you have 10 guesses between 0 and 20.
 
 Everytime you guess correctly, the upper limit doubles.
 
-##Difficulty
+## Difficulty
 
 The mode describedis **classic** mode.
 
@@ -32,6 +32,6 @@ We provide several difficulties:
 * Hard (Classical)
     - No limits or median is shown. Only 10 guesses no matter what.
 
-##Planned
+## Planned
 
 * Insanity Mode! (now with negative numbers)
