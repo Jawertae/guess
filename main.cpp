@@ -37,9 +37,9 @@ int main()
         //makes answer a random int between 1 and roof
         answer = rand() % roof + 1;
 
-        cout << "\e[1m" << "\e[44m" << "\t#########" << "\e[0m\n"
-            << "\e[1m" << "\e[44m" << "\tROUND " << setw(3) << round << "\e[0m\n" 
-            << "\e[1m" << "\e[44m" << "\t#########" << "\e[0m\n" << endl;
+        cout << setw(15) << "\e[1m" << "\e[44m" << "########" << "\e[0m\n"
+            << setw(15) << "\e[1m" << "\e[44m" << "ROUND " << setw(2) << round << "\e[0m\n" 
+            << setw(15) << "\e[1m" << "\e[44m" << "########" << "\e[0m\n" << endl;
 
         cout << "Guess a number between 1 and " << roof << endl;
 
@@ -90,22 +90,22 @@ int main()
             }
             else if(guess==answer)
             {
-                cout << "\e[1m" << "\e[34m" << "\n\t################\n" << 
-                    "\tThat was correct" << "\n\t################\n" << "\e[0m" << endl;
+                cout << "\e[1m" << "\e[34m\n" << setw(24) << "################\n" << setw(24) << 
+                    "That was correct\n" << setw(24) << "################\n" << "\e[0m" << endl;
                 win=true;
                 break;
             }
             else if(guess > answer)
             {
-                cout <<"\e[1m" << "\e[31m" << "\n\t###########\n" << 
-                    "\tGuess Lower" << "\n\t###########\n" << "\e[0m" << endl;
+                cout <<"\e[1m" << "\e[31m\n" << setw(22) << "############\n" << setw(22) << 
+                    "Guess  Lower\n" << setw(22) << "############\n" << "\e[0m" << endl;
                 if(guess < high ){high=guess;}
                 win=false;
             }
             else if(guess < answer)
             {
-                cout <<"\e[1m" << "\e[31m" << "\n\t############\n" << 
-                    "\tGuess Higher" << "\n\t############\n" << "\e[0m" << endl;
+                cout <<"\e[1m" << "\e[31m\n" << setw(22) << "############\n" << setw(22) << 
+                    "Guess Higher\n" << setw(22) << "############\n" << "\e[0m" << endl;
                 if(guess > low ){low=guess;}
                 win=false;
             }
@@ -144,9 +144,11 @@ int main()
 
             if(!win)
             {
-            cout << "\e[0m" << "\e[33m" << "\n\t################\n" << 
-                "\tYou lose! Loser!\n\tYou win NOTHING!" << 
-                "\n\t################\n" << "\e[0m" << endl;
+            cout << "\e[0m" << "\e[33m\n" << setw(24) <<
+                "################\n" << setw(24) << 
+                "You lose! Loser!\n" << setw(24) << 
+                "You win NOTHING!\n" << setw(24) << 
+                "################\n" << "\e[0m" << endl;
 
             }
 
@@ -154,7 +156,7 @@ int main()
         else
         {
             repeat = 'n';
-            cout << "\e[0m" << "\e[33m" << "\t######################\n" << "\tNobody likes a quitter\n" << "\t######################\n" << "\e[0m";
+            cout << "\e[0m" << "\e[33m" << setw(27) << "######################\n" << setw(27) << "Nobody likes a quitter\n" << setw(27) << "######################\n" << "\e[0m";
         }
     }
 }
