@@ -6,6 +6,9 @@
 //include some headers for random number
 //generation and for taking input from user
 
+//By awesomesocrates & jawertae
+
+
 using namespace std;
 
 int main()
