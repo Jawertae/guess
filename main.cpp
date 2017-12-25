@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <limits.h>
+#include <iomanip>
 
 //include some headers for random number
 //generation and for taking input from user
@@ -14,8 +15,8 @@ using namespace std;
 int main()
 {
 
-    int num=10,roof=10;
-    int answer,guess,low,high,diff;
+    int num=10,roof=10,round=1,diff=0;
+    int answer,guess,low,high;
     char repeat='y';
 
     bool win = false;
@@ -35,6 +36,10 @@ int main()
     {
         //makes answer a random int between 1 and roof
         answer = rand() % roof + 1;
+
+        cout << "\e[1m" << "\e[44m" << "\t#########" << "\e[0m\n"
+            << "\e[1m" << "\e[44m" << "\tROUND " << setw(3) << round << "\e[0m\n" 
+            << "\e[1m" << "\e[44m" << "\t#########" << "\e[0m\n" << endl;
 
         cout << "Guess a number between 1 and " << roof << endl;
 
@@ -123,10 +128,18 @@ int main()
                     cout << "You're too good for this game." << endl;
                     break;
                 }
-                if(diff!=3)
+                if(diff==1)
                 {
                     num++;
                 }
+                if(diff==2)
+                {
+                    if(round%5==0)
+                    {
+                        num++;
+                    }
+                }
+                round++;
             }
 
             if(!win)
